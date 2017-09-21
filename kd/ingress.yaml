@@ -26,5 +26,4 @@ spec:
   tls:
   - hosts:
     - rps.{{.DNS_PREFIX}}pttg.homeoffice.gov.uk
-    - pttg-rps-ui-{{.ENVIRONMENT}}.notprod.homeoffice.gov.uk
     secretName: letsencrypt-pttg-rps-ui-tls
