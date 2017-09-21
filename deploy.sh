@@ -9,7 +9,7 @@ if [ $ENVIRONMENT == "prod" ]
 then
     export DNS_PREFIX=
 else
-    export DNS_PREFIX=${ENVIRONMENT}.
+    export DNS_PREFIX=${ENVIRONMENT}.notprod.
 fi
 
 cd kd

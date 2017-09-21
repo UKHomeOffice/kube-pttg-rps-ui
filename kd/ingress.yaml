@@ -16,13 +16,6 @@ spec:
           serviceName: pttg-rps-ui
           servicePort: 443
         path: /
-  - host: pttg-rps-ui-{{.ENVIRONMENT}}.notprod.homeoffice.gov.uk
-    http:
-      paths:
-      - backend:
-          serviceName: pttg-rps-ui
-          servicePort: 443
-        path: /
   tls:
   - hosts:
     - rps.{{.DNS_PREFIX}}pttg.homeoffice.gov.uk
