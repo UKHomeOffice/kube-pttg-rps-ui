@@ -109,7 +109,7 @@ spec:
           - --no-redirects=false
           - --cors-origins='*'
           - --resource=uri=/healthz|white-listed=true
-          - --resource=uri=/|methods=GET,POST|roles=pttg-user
+          - --resource=uri=/|methods=GET,POST|roles=pttg-rps
           - --secure-cookie=true
           - --verbose
         imagePullPolicy: Always
