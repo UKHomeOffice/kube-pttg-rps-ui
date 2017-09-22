@@ -94,11 +94,6 @@ spec:
               configMapKeyRef:
                 name: endpoint-config
                 key: PROXY_DISCOVERY_URL
-          - name: PROXY_REDIRECTION_URL
-            valueFrom:
-              configMapKeyRef:
-                name: endpoint-config
-                key: PROXY_REDIRECTION_URL
         args:
           - --config=/etc/secrets/keycloak-api-secret.yaml
           - --client-id=pttg-rps-{{.ENVIRONMENT}}
@@ -112,6 +107,7 @@ spec:
           - --resource=uri=/|methods=GET,POST|roles=pttg-rps
           - --secure-cookie=true
           - --verbose
+          - --redirection-url=https://rps.{{.DNS_PREFIX}}pttg.homeoffice.gov.uk
         imagePullPolicy: Always
         ports:
           - name: keycloak-http
