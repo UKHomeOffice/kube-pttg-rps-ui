@@ -12,7 +12,7 @@ spec:
       name: pttg-rps-ui
   template:
     metadata:
-      \
+      labels:
         name: pttg-rps-ui
         version: {{.VERSION}}
     spec:
