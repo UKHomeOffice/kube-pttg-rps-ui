@@ -125,6 +125,8 @@ spec:
         env:
           - name: API_ROOT
             value: "https://pttg-rps-api.pt-i-{{.ENVIRONMENT}}.svc.cluster.local"
+          - name: FEEDBACK_ROOT
+            value: "https://pttg-feedback.pt-i-{{.ENVIRONMENT}}.svc.cluster.local"
           - name: CA_CERTS_PATH
             value: "/data/pttg-residence-proving-ui-ca.pem"
         resources:
